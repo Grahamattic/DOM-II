@@ -83,23 +83,24 @@
     // Event 10 - enable dragging on the gondola image to enlarge.
     gondolaImg.addEventListener('dragstart', () => {
         gondolaImg.style.transform = "scale(2)";
-        gondolaImg.style.transition = "all 1s";
+        gondolaImg.style.transition = "all 2s";
     });
 
     // Event 11 - return the gondola image to its original size.
     gondolaImg.addEventListener('dragend', () => {
         gondolaImg.style.transform = "scale(1)";
-        gondolaImg.style.transition = "all 1s";
+        gondolaImg.style.transition = "all 2s";
     });
 
 
-// Stop Propagation (Nest two similar events somewhere in the site and prevent the event propagation)
+// Stop Propagation
 
-    buttons.addEventListener('click', (event) => {
-    buttons.style.backgroundColor="#FEFEFE";
-    event.stopPropagation();
-    console.log("start")})
-
+    let h4s = document.querySelectorAll("h4");
+        h4s.addEventListener('click', (event) => {
+        h4s.style.backgroundColor="#009933";
+        event.stopPropagation();
+        console.log("start")
+    });
 
 // Prevent Default (Stop the navigation items from refreshing the page.)
 
