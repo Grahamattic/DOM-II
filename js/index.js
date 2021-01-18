@@ -57,3 +57,21 @@
     });
 
 
+// Event 8(mouseenter) and Event 9(mouseleave)
+
+    // Grab the intro paragraph.
+    let introP = document.querySelector(".intro p");
+
+    // Event 8: change the intro paragraph backgound to black on mouseenter.
+    introP.addEventListener('mouseenter', () => {
+        introP.style.background = "#000000";
+        introP.style.color = "#ffffff";
+    });
+
+    // Event 9: reset the paragraph background to white on mouseleave.
+    introP.addEventListener('mouseleave', () => {
+        introP.style.background = "#ffffff";
+        introP.style.color = "#000000";
+    });
+
+
