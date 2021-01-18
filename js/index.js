@@ -46,3 +46,14 @@
     });
     
 
+// Event 7(click)
+
+    // Grab the intro h2 heading.
+    let introH2 = document.querySelector(".intro h2");
+
+    // Change the h2 heading background on click.
+    introH2.addEventListener('click', () => {
+        introH2.style.background = "#699000";
+    });
+
+
