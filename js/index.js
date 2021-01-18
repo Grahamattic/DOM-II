@@ -51,7 +51,7 @@
     // Grab the intro h2 heading.
     let introH2 = document.querySelector(".intro h2");
 
-    // Change the h2 heading background on click.
+    // Change the h2 heading background color to green on click.
     introH2.addEventListener('click', () => {
         introH2.style.background = "#699000";
     });
@@ -77,36 +77,59 @@
 
 // Event 10(dragstart) and Event 11(dragend)
 
-    // Grab the gondola image.
-    let gondolaImg = document.querySelector(".content-destination img");
+    // Grab the fun.jpg image.
+    let funImg = document.querySelector(".inverse-content img");
 
-    // Event 10 - enable dragging on the gondola image to enlarge.
-    gondolaImg.addEventListener('dragstart', () => {
-        gondolaImg.style.transform = "scale(2)";
-        gondolaImg.style.transition = "all 2s";
+    // Grab the destination.jpg image.
+    let destinationImg = document.querySelector(".content-destination img");
+
+    // Event 10a - enable dragging on the fun.jpg image to resize.
+    funImg.addEventListener('dragstart', () => {
+        funImg.style.transform = "scale(2)";
+        funImg.style.transition = "all 2s";
     });
 
-    // Event 11 - return the gondola image to its original size.
-    gondolaImg.addEventListener('dragend', () => {
-        gondolaImg.style.transform = "scale(1)";
-        gondolaImg.style.transition = "all 2s";
+    // Event 10b - enable dragging on the destination.jpg image to resize.
+    destinationImg.addEventListener('dragstart', () => {
+        destinationImg.style.transform = "scale(2)";
+        destinationImg.style.transition = "all 2s";
+    });
+
+    // Event 11a - return the fun.jpg image to its original size.
+    funImg.addEventListener('dragend', () => {
+        funImg.style.transform = "scale(1)";
+        funImg.style.transition = "all 2s";
+    });
+
+    // Event 11b - return the destination.jpg image to its original size.
+    desinaionImg.addEventListener('dragend', () => {
+        destinationImg.style.transform = "scale(1)";
+        destinationImg.style.transition = "all 2s";
     });
 
 
 // Stop Propagation
 
-let h4s = document.querySelectorAll("h4");
-h4s.addEventListener('click', (event) => {
-h4s.style.backgroundColor="#009933";
-event.stopPropagation();
-console.log("start")
-});
+    // Grab the h4 headings.
+    let h4s = document.querySelectorAll("h4");
+
+    // Change the h4 headings' background color on click.
+    h4s.addEventListener('click', (event) => {
+    h4s.style.backgroundColor="#009933";
+
+    // Stop the flow of property inheritance to child elements.
+    event.stopPropagation();
+    console.log("start")
+    });
 
 
-// Prevent Default (Stop the navigation items from refreshing the page.)
+// Prevent Default
 
-let stopA = document.querySelector(".main-navigation");
-stopA.addEventListener('click', (event) => {
-event.preventDefault();
-console.log('stopped!');
-});
+    // Grab the site's main navigation menu.
+    let stopA = document.querySelector(".main-navigation");
+
+    // Prevent the navigation items from performing thier default action of refreshing the page.
+    stopA.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('stopped!');
+    });
