@@ -75,3 +75,21 @@
     });
 
 
+// Event 10(dragstart) and Event 11(dragend)
+
+    // Grab the gondola image.
+    let gondolaImg = document.querySelector(".content-destination img");
+
+    // Event 10 - enable dragging on the gondola image to enlarge.
+    gondolaImg.addEventListener('dragstart', () => {
+        gondolaImg.style.transform = "scale(2)";
+        gondolaImg.style.transition = "all 2s";
+    });
+
+    // Event 11 - return the gondola image to its original size.
+    gondolaImg.addEventListener('dragend', () => {
+        gondolaImg.style.transform = "scale(1)";
+        gondolaImg.style.transition = "all 2s";
+    });
+
+
