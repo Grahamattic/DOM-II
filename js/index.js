@@ -102,3 +102,11 @@ event.stopPropagation();
 console.log("start")
 });
 
+
+// Prevent Default (Stop the navigation items from refreshing the page.)
+
+let stopA = document.querySelector(".main-navigation");
+stopA.addEventListener('click', (event) => {
+event.preventDefault();
+console.log('stopped!');
+});
