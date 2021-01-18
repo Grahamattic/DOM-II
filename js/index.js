@@ -28,3 +28,21 @@
     });
 
 
+// Event 5(mouseenter) and 6(mouseout)
+
+    // Grab the bus image.
+    let bus = document.querySelector(".intro img");
+
+    // Event 5 - rotate the bus image on mouse enter.
+    bus.addEventListener('mouseenter', () => {
+        bus.style.transform = "rotate(360deg)";
+        bus.style.transition = "all 2s";
+    });
+
+    // Event 6 - rotate the bus image on mouse out.
+    bus.addEventListener('mouseout', () => {
+        bus.style.transform = "rotate(0deg)";
+        bus.style.transition = "all 2s";
+    });
+    
+
